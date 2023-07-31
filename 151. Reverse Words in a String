@@ -1,0 +1,16 @@
+class Solution {
+    public String reverseWords(String s) {
+       StringBuilder sb= new StringBuilder();
+       int n=s.length();
+       int l=n;
+       for(int i=n-1;i>=0;i--){
+           if(s.charAt(i)==' '){
+               sb.append(s.substring(i,l));
+               l=i;
+           }
+       }
+       sb.append(' '+s.substring(0,l));
+       return sb.toString().replaceAll("\s+"," ").trim();
+        
+    }
+}
