@@ -1,0 +1,15 @@
+class Solution {
+    public int findGCD(int[] nums) {
+        Arrays.sort(nums);
+        int l=nums.length;
+        int s=nums[0];
+        int g=nums[l-1];
+        return gcd(g,s);
+       
+        
+    }
+     private int gcd(int g,int s){
+           return s==0?g:gcd(s,g%s);
+            
+        }
+}   
